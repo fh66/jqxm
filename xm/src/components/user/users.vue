@@ -1,6 +1,10 @@
 <template>
   <el-card class="box-card">
-    <crumbs firstnav="用户管理" lastnav="用户列表"/>
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/ext' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
+      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
+    </el-breadcrumb>
     <el-row>
       <el-col :span="8">
         <div style="margin-top: 15px;">
@@ -128,7 +132,7 @@
 </template>
 
 <script>
-export default {  
+export default {
   data() {
     return {
       // 搜索信息
@@ -323,11 +327,11 @@ export default {
           message: meta.msg,
           type: "success"
         });
-        this.options=data
-        this.management=false;
+        this.options = data;
+        this.management = false;
         this.getAlllist();
-      }else{
-        this.$message.error(meta.msg)
+      } else {
+        this.$message.error(meta.msg);
       }
     },
     qx() {
