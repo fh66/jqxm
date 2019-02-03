@@ -98,7 +98,7 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="qx">取 消</el-button>
+        <el-button @click="qx1">取 消</el-button>
         <el-button type="primary" @click="determine">确 定</el-button>
       </div>
     </el-dialog>
@@ -110,7 +110,6 @@
         </el-form-item>
         <el-form-item label="角色" label-width="120px">
           <template>
-            {{managObj.rid}}
             <el-select v-model="managObj.rid" placeholder="请选择">
               <el-option :disabled="true" :value="-1" label="请选择职位"></el-option>
               <el-option
@@ -258,7 +257,7 @@ export default {
       this.getAlllist();
     },
     // 取消
-    qx() {
+    qx1() {
       this.edit = false;
     },
     // 当页容器改变时触发

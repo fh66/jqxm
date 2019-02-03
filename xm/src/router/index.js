@@ -4,6 +4,7 @@ import Login from '@/components/login.vue'
 import ext from '@/components/ext.vue'
 import users from '@/components/user/users.vue'
 import rights from '@/components/qxlb/rights.vue'
+import roles from '@/components/qxlb/roles.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ export default new Router({
       {
         path:'/rights',
         component:rights,
+      },
+      {
+        path:'/roles',
+        component:roles,
       }
     ]
     }
